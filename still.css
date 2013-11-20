@@ -1,0 +1,33 @@
+
+
+			.main-table thead {
+				background-color: orange;
+				font-weight: bold;
+				font-size: 1.4em;
+				
+				
+
+			}
+			.main-table {
+				border: 2.5px solid #333333;
+				color: white;
+			}
+			.main-table tbody tr td{
+				text-align: center;
+				background-color: green;
+				font-size: 1.4em;
+				border: 2.5px solid #333333;
+				border-color: red;
+			}
+
+			body{
+				font-weight: bold;
+				margin-left: 500px; 
+				margin-top: 300px;
+				background-color: black;
+			}
+
+
+			
+
+			

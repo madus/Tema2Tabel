@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="still.css" />
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+
+		 $(function() {
+		 	 $('#formular').submit(function(e) {
+                                        
+                                        e.preventDefault();
+ 
+                                        var nr = $('#nr').val();
+                                        var nume = $('#nume').val();
+                                        var prenume = $('#prenume').val();
+                                        var varsta = $('#varsta').val();
+
+                                       $('#tabel tr:last').after('<tr><td>' + nr + '</td><td>'+ nume + '</td><td>' + prenume + '</td><td>' + varsta + '</td></tr>');
+                                       
+                                       $('#tabel tr:last td').click(function(e){
+		 	 								var x=$('td').val();
+		 								$(this).css('visibility','hidden');
+
+		 	 							});
+                                });
+
+		 	 $('td').click(function(e){
+		 	 	var x=$('td').val();
+		 	 $(this).css('visibility','hidden');
+
+		 	 });
+		 	
+
+
+		});
+	</script>
+</head>
+ <body>
+ 	<form id="formular">
+ 						<input id="nr" type="text" />
+                        <input id="nume" type="text" />
+                        <input id="prenume" type="text" />
+                        <input id="varsta" type="text" />
+                        <input id="submit-formular" type="submit" />
+                </form>
+	<table class = "main-table" id = "tabel">
+			<thead>
+				<tr>
+					<td>Nr</td>
+					<td> Nume</td>
+					<td> Prenume</td>
+					<td> Varsta</td>
+					
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<td>1</td>
+					<td>Popescu</td>
+					<td>Ion</td>
+					<td>21</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Ionescu</td>
+					<td>Gigi</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Vlaicu</td>
+					<td>Aurel</td>
+					<td>33</td>
+				</tr>
+			</tbody>
+	</table>
+</body>
+</html>
