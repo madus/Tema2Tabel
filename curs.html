@@ -6,6 +6,11 @@
 	<script>
 
 		 $(function() {
+		 		var ascunde_cell = function(e){
+		 	 								var x=$('td').val();
+		 								$(this).css('visibility','hidden');
+
+		 	 							};
 		 	 $('#formular').submit(function(e) {
                                         
                                         e.preventDefault();
@@ -17,18 +22,12 @@
 
                                        $('#tabel tr:last').after('<tr><td>' + nr + '</td><td>'+ nume + '</td><td>' + prenume + '</td><td>' + varsta + '</td></tr>');
                                        
-                                       $('#tabel tr:last td').click(function(e){
-		 	 								var x=$('td').val();
-		 								$(this).css('visibility','hidden');
+                                       $('#tabel tr:last td').click(ascunde_cell);
 
 		 	 							});
-                                });
+                             
 
-		 	 $('td').click(function(e){
-		 	 	var x=$('td').val();
-		 	 $(this).css('visibility','hidden');
-
-		 	 });
+		 	 $('td').click(ascunde_cell);
 		 	
 
 
